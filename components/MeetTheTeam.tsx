@@ -16,43 +16,43 @@ interface TeamMember {
 const teamMembers: TeamMember[] = [
   {
     name: "Yadav S Singh",
-    department: "CEO & Co-Founder",
+    department: "Pitch & Communication",
     src: "/per1.svg",
-    title: "Yadav S Singh - CEO & Co-Founder",
-    role: "CEO IG",
-    role2: "CEO & Co-Founder"
+    title: "Yadav S Singh - Pitch & Communication",
+    role: "PITCH & COMMUNICATION",
+    role2: "Tech Lead & Communication"
   },
   {
     name: "Abrahame H Mola",
-    department: "CEO & Co-Founder",
+    department: "Research & Documentation",
     src: "/per2.svg",
-    title: "Abrahame H Mola - CEO & Co-Founder",
-    role: "CEO IG",
-    role2: "CEO & Co-Founder"
+    title: "Abrahame H Mola - Research & Documentation",
+    role: "RESEARCH & DOCUMENTATION",
+    role2: "Research & Documention"
   },
   {
     name: "Abisola O Adeyanu",
-    department: "CEO & Co-Founder",
+    department: "CEO",
     src: "/per3.svg",
-    title: "Abisola O Adeyanu - CEO & Co-Founder",
+    title: "Abisola O Adeyanu - CEO",
     role: "CEO",
-    role2: "CEO & Co-Founder"
+    role2: "CEO"
   },
   {
     name: "Harrington Mbangu",
-    department: "CEO & Co-Founder",
+    department: "Product Designer",
     src: "/per4.svg",
-    title: "Harrington Mbangu - CEO & Co-Founder",
-    role: "CEO IG",
-    role2: "CEO & Co-Founder"
+    title: "Harrington Mbangu - Product Designer",
+    role: "PRODUCT DESIGN",
+    role2: "Product Designer"
   },
   {
     name: "Luciun September",
-    department: "Tech Lead & Co-Founder",
+    department: "Tech Lead",
     src: "/per5.svg",
-    title: "Luciun September - Tech Lead & Co-Founder",
+    title: "Luciun September - Tech Lead",
     role: "TECH LEAD",
-    role2: "Tech lead & Co-Founder"
+    role2: "Tech lead"
   }
 ]
 
