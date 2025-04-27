@@ -82,7 +82,7 @@ const Accordion = () => {
 
   return (
     <div className={styles.accordion}>
-      <h2 className={styles.accordionTitle}>FAQs</h2>
+      <br/><br/><h2 className={styles.accordionTitle}>FAQs</h2>
       {faqs.map((faq, index) => (
         <AccordionItem
           key={index}

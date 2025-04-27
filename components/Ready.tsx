@@ -7,7 +7,14 @@ const Ready = () => {
       <div className={styles.overlay}>
         <div className={styles.content}>
           <h1 className={styles.heading}>Ready to invest in<br />a greener future?</h1>
-          <button className={styles.button}>Join Waitlist</button>
+          <a 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdNgyOJ42g5ZSJHsX3p5whOXltis6q5z3N05kgI8vgfJ17goA/viewform?usp=dialog"
+            target="_blank" 
+            rel="noopener noreferrer"
+            className={styles.button}
+          >
+            Join Waitlist
+          </a>
         </div>
       </div>
     </div>

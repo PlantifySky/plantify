@@ -3,20 +3,18 @@ import Image from 'next/image'
 
 const HowToStart = () => {
   return (
-    <section className="how-to-start py-24 px-4 md:px-8 lg:px-16 flex flex-col items-center justify-center min-h-[50vh]">
-      <div className="container mx-auto text-center flex flex-col items-center justify-center"><br/><br/><br/><br/>
-        <h2 className="text-[rgba(89,156,16,1)] font-medium text-xl md:text-2xl mb-5">How To Start</h2><br/>
-        <br/>
-        <h1 className="how-works-heading text-6xl md:text-7xl lg:text-6xl mb-8 text-[#042C27]">
+    <section className="how-to-start py-20 px-4 md:px-8 lg:px-16 flex flex-col items-center justify-center min-h-[50vh]">
+      <div className="container mx-auto text-center flex flex-col items-center justify-center">
+        <h2 className="text-[rgba(89,156,16,1)] font-medium text-xl md:text-2xl mb-10">How To Start</h2>
+        <h1 className="how-works-heading text-6xl md:text-7xl lg:text-6xl mb-10 text-[#042C27]">
           How It Works
-        </h1>
+        </h1><br/>
         
-        <p className="how-works-description mx-auto text-gray-700 text-base md:text-lg max-w-2xl mb-16">
+        <p className="how-works-description mx-auto text-gray-700 text-base md:text-lg max-w-2xl mb-12">
           We provide farmers with a much-needed alternative to traditional financing. Our 
           goal is to promote food security, rural economic development, and 
           environmentally responsible farming through technology.
-        </p>
-        <br/><br/>
+        </p><br/><br/>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
           {/* Card 1 */}
@@ -79,7 +77,6 @@ const HowToStart = () => {
             </p>
           </div>
         </div>
-        <br/><br/><br/>
       </div>
     </section>
   )

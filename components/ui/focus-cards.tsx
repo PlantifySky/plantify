@@ -30,13 +30,13 @@ export const Card = React.memo(
     isMobile?: boolean;
     nameComponent?: React.ReactNode;
   }) => (
-    <div className="flex flex-col">
+    <div className="flex flex-col items-center w-full mb-2"> {/* Keep mb-2 to maintain name positioning */}
       <div
         onMouseEnter={() => !isMobile && setHovered(index)}
         onMouseLeave={() => !isMobile && setHovered(null)}
         onClick={() => isMobile && setHovered(hovered === index ? null : index)}
         className={cn(
-          "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-44 md:h-72 w-full transition-all duration-300 ease-out",
+          "rounded-lg relative bg-gray-100 dark:bg-neutral-900 overflow-hidden h-52 md:h-64 w-full transition-all duration-300 ease-out", /* Decreased height from h-60/h-96 to h-52/h-64 */
           hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
         )}
       >
@@ -46,7 +46,7 @@ export const Card = React.memo(
           className="object-contain w-full h-full"
           width={500}
           height={500}
-          onError={() => {
+          onError={(e) => {
             console.error(`Failed to load image: ${card.src}`);
             // Can't set src directly on next/image, need a different approach for fallbacks
           }}
@@ -65,8 +65,12 @@ export const Card = React.memo(
         </div>
       </div>
       
-      {/* Display name component if provided (for mobile view) */}
-      {isMobile && nameComponent}
+      {/* Display name component with reduced spacing */}
+      {isMobile && nameComponent && (
+        <div className="w-full flex justify-center mt-2"> {/* Decreased from mt-6 to mt-2 */}
+          {nameComponent}
+        </div>
+      )}
     </div>
   )
 );
@@ -101,21 +105,64 @@ export function FocusCards({
 
   return (
     <div className={cn(
-      "grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto w-full", 
-      customClass
+      "grid grid-cols-1 md:grid-cols-3 gap-14 max-w-6xl mx-auto w-full py-4",
+      customClass,
+      isMobile ? "mobile-layout" : ""
     )}>
-      {cards.map((card, index) => (
-        <Card
-          key={`${card.title}-${index}`}
-          card={card}
-          index={index}
-          hovered={hovered}
-          setHovered={setHovered}
-          showMobileInfo={showMobileInfo}
-          isMobile={isMobile}
-          nameComponent={renderName && renderName(index)}
-        />
-      ))}
+      {isMobile ? (
+        // Mobile layout - First card featured, others in 2x2 grid
+        <>
+          {/* Featured card */}
+          {cards.length > 0 && (
+            <div key={`${cards[0].title}-featured`} className="featured-card">
+              <Card
+                card={cards[0]}
+                index={0}
+                hovered={hovered}
+                setHovered={setHovered}
+                showMobileInfo={showMobileInfo}
+                isMobile={isMobile}
+                nameComponent={renderName && renderName(0)}
+              />
+            </div>
+          )}
+          
+          {/* Other cards in 2x2 grid */}
+          <div className="grid-cards">
+            {cards.slice(1).map((card, i) => {
+              const index = i + 1;
+              return (
+                <div key={`${card.title}-${index}`} className="flex flex-col items-center">
+                  <Card
+                    card={card}
+                    index={index}
+                    hovered={hovered}
+                    setHovered={setHovered}
+                    showMobileInfo={showMobileInfo}
+                    isMobile={isMobile}
+                    nameComponent={renderName && renderName(index)}
+                  />
+                </div>
+              );
+            })}
+          </div>
+        </>
+      ) : (
+        // Desktop layout - All cards in regular grid
+        cards.map((card, index) => (
+          <div key={`${card.title}-${index}`} className="flex flex-col items-center">
+            <Card
+              card={card}
+              index={index}
+              hovered={hovered}
+              setHovered={setHovered}
+              showMobileInfo={showMobileInfo}
+              isMobile={isMobile}
+              nameComponent={renderName && renderName(index)}
+            />
+          </div>
+        ))
+      )}
     </div>
   );
 }

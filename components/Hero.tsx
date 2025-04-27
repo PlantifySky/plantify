@@ -5,25 +5,32 @@ const Hero = () => {
   return (
     <div className="hero-content flex-col lg:flex-row">
       <div className="flex flex-col w-full md:max-w-2xl z-10 px-4 md:px-0 pt-10 md:pt-0">
-        <span className="hero-tagline mx-auto md:mx-0">
-          Invest in Farms. Grow a Better Future
-        </span>
+        <div className="text-center md:text-left mb-4">
+          <span className="hero-tagline">
+            Invest in Farms. Grow a Better Future
+          </span>
+        </div>
 
         <h1 className="hero-heading text-center md:text-left">
           <span className="text-[#65B741]">Plantify</span> 
           <span className="text-white"> connects everyday people with real farms for impact-driven returns.</span>
         </h1>
         
-        <p className="hero-text text-white text-base md:text-lg mb-8 text-center md:text-left">
+        <p className="hero-text text-white text-base md:text-lg mb-4 text-center md:text-left">
           We enable individuals to invest in specific farm plots and earn a 
           share of future harvest profits. At the same time, we provide 
           farmers with a much-needed alternative to traditional financing.
         </p>
 
         <div className="flex justify-center md:justify-start">
-          <button className="waitlist-button">
+          <a 
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdNgyOJ42g5ZSJHsX3p5whOXltis6q5z3N05kgI8vgfJ17goA/viewform?usp=dialog" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="waitlist-button"
+          >
             Join Waitlist
-          </button>
+          </a>
         </div>
       </div>
       

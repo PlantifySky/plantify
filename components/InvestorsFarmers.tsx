@@ -108,20 +108,24 @@ const InvestorsFarmers = () => {
           </div>
           
           <div className={styles.featureContainer}>
-            <div className={styles.verticalArrow}></div>
+            <div className={styles.firstArrow}></div>
             
             <div className={styles.featureItem}>
-              <div className={styles.featureArrow}></div>
+              <div className={styles.firstHorizontalArrow}></div>
               <div className={styles.featureTitle}>Symbol of Growth:</div>
               <div className={styles.featureDescription}>
                 The embedded leaf represents life, farming, and the organic growth we aim to lead—both for farmers and communities worldwide.
               </div>
             </div>
             
-            <div className={styles.verticalArrow}></div>
+
+            
+            <div className={styles.featureSpacer}></div>
+            
+            <div className={styles.secondArrow}></div>
             
             <div className={styles.featureItem}>
-              <div className={styles.featureArrow}></div>
+              <div className={styles.secondHorizontalArrow}></div>
               <div className={styles.featureTitle}>Plant + Amplify:</div>
               <div className={styles.featureDescription}>
                 Our name is born of two ideas: planting for the future and amplifying impact through technology, innovation, and community-driven investment.

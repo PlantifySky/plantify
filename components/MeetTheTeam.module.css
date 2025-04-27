@@ -1,5 +1,5 @@
 .teamSection {
-  padding: 4rem 0;
+  padding: 8rem 0; /* Increased from 6rem to 8rem */
   background-color: white;
   width: 100%;
 }
@@ -9,10 +9,11 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
+  max-width: 1400px; /* Match cardsContainer max-width */
+  margin: 0 auto; /* Center the entire container */
 }
 
 .headingContainer {
-  margin-bottom: 3rem;
   text-align: center;
   width: 100%;
 }
@@ -38,30 +39,74 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 3rem 0; /* Increased from 2rem to 3rem */
 }
 
 .teamCards {
   display: grid !important;
   grid-template-columns: repeat(5, 1fr) !important;
-  gap: 1.5rem !important;
+  gap: 4rem !important; /* Decreased from 6rem to 4rem */
   width: 100% !important;
   justify-content: center !important;
+  margin: 0 auto !important;
 }
 
-/* Team info styling - replaces the mobile card info */
+/* Add a max-width to the card items to make them appear wider relative to their height */
+.teamCards > div {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* Desktop layout adjustments */
+.teamCards:not(.mobileCards) {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 4rem !important; /* Decreased from 6rem to 4rem */
+  width: 100% !important;
+}
+
+/* Mobile layout styles */
+.mobileCards .featured-card {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.mobileCards .grid-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem; /* Keep this the same for mobile */
+  width: 100%;
+}
+
+/* Adjustments for card images */
+.teamCards img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #f3f4f6;
+  margin: 0 auto;
+  aspect-ratio: 4/3;
+}
+
+/* Team info styling */
 .teamInfoContainer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1.5rem;
-  width: 100%;
-  margin-top: 1.5rem;
+  gap: 4rem; /* Increased from 2.5rem to 4rem to match card spacing */
+  width: 100%; /* Changed from 85% to 100% to match card container width */
+  margin: 1rem auto 0;
   text-align: center;
+  justify-items: center;
 }
 
 .memberInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100%;
+  width: 100%;
+  padding: 0 0.25rem; /* Decreased padding from 0.5rem to 0.25rem */
 }
 
 .memberName {
@@ -81,83 +126,120 @@
   display: none;
 }
 
-/* Specific styling for SVG images */
-.teamCards img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  background-color: #f3f4f6; /* Light gray background for SVGs */
-}
-
 /* Inline name container for mobile view */
 .inlineNameContainer {
-  display: none;
+  display: none; /* Hidden by default, will be shown in mobile view */
   text-align: center;
   margin-top: 0.75rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   width: 100%;
 }
 
-/* Hide on mobile class */
-.hideOnMobile {
-  display: grid;
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-  .teamCards {
-    grid-template-columns: repeat(3, 1fr) !important;
-  }
-  
-  .teamInfoContainer {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
+/* Mobile layout specific adjustments */
 @media (max-width: 768px) {
   .heading {
     font-size: 2rem;
   }
   
-  /* Mobile layout: First card is featured/centered, others in 2x2 grid */
-  .teamCards {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    gap: 0.5rem !important;
+  /* Reset any conflicting styles */
+  .teamCards, .teamCards.mobileCards {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 2rem !important;
   }
   
+  /* Featured card (first card) styling */
   .teamCards > div:first-child {
-    grid-column: 1 / -1;
-    margin-bottom: 1rem;
+    width: 100% !important;
+    margin-bottom: 2rem !important;
   }
   
-  .teamCards > div:not(:first-child) {
+  /* Container for the 2x2 grid of remaining cards */
+  .teamCards > div:nth-child(2) {
+    width: 100% !important;
     display: grid !important;
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.75rem !important;
+    gap: 1.5rem !important;
   }
   
-  .teamCards > div {
-    height: auto !important;
+  /* Ensure grid items take full width */
+  .teamCards > div:nth-child(2) > div {
+    width: 100% !important;
+  }
+  
+  /* Image size adjustments */
+  .teamCards > div:first-child img,
+  .teamCards > div:first-child .h-52 {
+    height: 380px !important;
+    object-position: center !important;
+    object-fit: contain !important;
+  }
+  
+  .teamCards > div:nth-child(2) img,
+  .teamCards > div:nth-child(2) .h-52 {
+    height: 220px !important;
+    object-position: center !important;
+    object-fit: contain !important;
   }
   
   /* Show inline name containers on mobile */
   .inlineNameContainer {
     display: block;
+    text-align: center;
+    margin-top: 0.75rem !important;
+    margin-bottom: 1.5rem !important;
+    width: 100%;
   }
   
-  /* Hide the bottom team info on mobile since we're showing inline */
+  /* Hide the desktop team info when in mobile */
   .hideOnMobile {
-    display: none;
+    display: none !important;
+  }
+  
+  /* Specific fix for Person3's SVG - make it smaller to match others */
+  .teamCards > div:first-child img[src*="per3"],
+  .mobileCards .featured-card img[src*="per3"] {
+    height: 350px !important; /* Reduced from 420px */
+    width: 70% !important; /* Reduced from 80% */
+    max-width: 70% !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    background-color: #f3f4f6 !important;
+    margin: 0 auto !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  
+  /* Ensure all other images display properly */
+  .teamCards img, 
+  .mobileCards img {
+    object-position: center center !important;
+    background-color: #f3f4f6;
   }
 }
 
 @media (max-width: 480px) {
-  .teamCards > div:not(:first-child) {
-    grid-template-columns: repeat(2, 1fr) !important;
+  /* Adjustments for very small screens */
+  .teamCards > div:nth-child(2) {
+    gap: 1rem !important;
   }
   
-  .teamCards > div > div {
-    height: 150px !important;
+  .teamCards > div:first-child img,
+  .teamCards > div:first-child .h-52 {
+    height: 300px !important;
+  }
+  
+  .teamCards > div:nth-child(2) img,
+  .teamCards > div:nth-child(2) .h-52 {
+    height: 180px !important;
+  }
+  
+  /* Adjust featured card size for smaller screens */
+  .teamCards > div:first-child img[src*="per3"],
+  .mobileCards .featured-card img[src*="per3"] {
+    height: 250px !important; /* Reduced from 350px */
+    width: 70% !important; /* Reduced width */
+    max-width: 70% !important;
   }
 }

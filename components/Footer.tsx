@@ -63,16 +63,16 @@ const Footer = () => {
         {/* Right Side */}
         <div className="footer-social-container">
           <a href="https://www.linkedin.com/company/plantify-lynxio-tech" className="footer-social-icon" target="_blank" rel="noopener noreferrer">
-            <FaLinkedin size={100} />
+            <FaLinkedin size={50} />
           </a>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" className="footer-social-icon" target="_blank" rel="noopener noreferrer">
-            <FaInstagram size={100} />
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1&autoplay=1" className="footer-social-icon" target="_blank" rel="noopener noreferrer">
+            <FaInstagram size={50} />
           </a>
-          <a href="https://www.youtube.com/watch?v=V4y1bFKW8OA" className="footer-social-icon" target="_blank" rel="noopener noreferrer">
-            <FaFacebookF size={100} />
+          <a href="https://www.youtube.com/watch?v=V4y1bFKW8OA&autoplay=1" className="footer-social-icon" target="_blank" rel="noopener noreferrer">
+            <FaFacebookF size={50} />
           </a>
-          <a href="https://www.youtube.com/watch?v=VJ89UoTybnI" className="footer-social-icon" target="_blank" rel="noopener noreferrer">
-            <FaGlobe size={100} />
+          <a href="https://www.youtube.com/watch?v=VJ89UoTybnI&autoplay=1" className="footer-social-icon" target="_blank" rel="noopener noreferrer">
+            <FaGlobe size={50} />
           </a>
         </div>
       </div>

@@ -58,6 +58,8 @@ const teamMembers: TeamMember[] = [
 
 const MeetTheTeam = () => {
   const [orderedMembers, setOrderedMembers] = useState(teamMembers);
+  const [featuredMember, setFeaturedMember] = useState<TeamMember | null>(null);
+  const [otherMembers, setOtherMembers] = useState<TeamMember[]>([]);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -66,10 +68,12 @@ const MeetTheTeam = () => {
       setIsMobile(mobile);
       
       if (mobile) {
-        const abisola = teamMembers[2];
+        // For mobile, place Abisola first and organize others for 2x2 grid
+        const abisola = teamMembers[2]; // Abisola at index 2
         const others = teamMembers.filter((_, idx) => idx !== 2);
         setOrderedMembers([abisola, ...others]);
       } else {
+        // For desktop, use original order
         setOrderedMembers(teamMembers);
       }
     };
@@ -93,38 +97,43 @@ const MeetTheTeam = () => {
   
   return (
     <section className={styles.teamSection}>
-      <div className={`container mx-auto px-4 ${styles.container}`}>
+      <div className={`mx-auto ${styles.container}`}> {/* Removed container class to avoid conflicting styles */}
         {/* First row: Headings */}
         <div className={styles.headingContainer}>
           <p className={styles.subheading}>Building Credibility & Trust</p>
           <h2 className={styles.heading}>Meet The Team</h2>
         </div>
         
-        {/* Focus Cards - with reordered members for mobile */}
-        <div className={styles.cardsContainer}>
-          <FocusCards 
-            cards={orderedMembers.map(member => ({
-              title: member.role,
-              src: member.src,
-            }))}
-            customClass={styles.teamCards}
-            showMobileInfo={false}
-            initialFocusIndex={isMobile ? 0 : null}
-            renderName={renderMemberName}
-          />
-        </div>
-        
-        {/* Team member info - desktop only */}
-        <div className={`${styles.teamInfoContainer} ${isMobile ? styles.hideOnMobile : ''}`}>
-          {teamMembers.map((member, index) => (
-            <div key={index} className={styles.memberInfo}>
-              <h3 className={styles.memberName}>{member.name}</h3>
-              <p className={styles.memberRole}>{member.role2}</p>
+        {/* Wrap cards and info in contentWrapper for better alignment */}
+        <div className={styles.contentWrapper}>
+          <div className={styles.cardsContainer}>
+            <div className="w-full flex flex-col items-center">
+              <FocusCards 
+                cards={orderedMembers.map(member => ({
+                  title: member.role,
+                  src: member.src,
+                }))}
+                customClass={`${styles.teamCards} ${isMobile ? styles.mobileCards : ''}`}
+                showMobileInfo={false}
+                initialFocusIndex={isMobile ? 0 : null}
+                renderName={renderMemberName}
+              />
+              
+              {/* Team member info - desktop only */}
+              <div className={`${styles.teamInfoContainer} ${isMobile ? styles.hideOnMobile : ''}`}>
+                {orderedMembers.map((member, index) => (
+                  <div key={index} className={styles.memberInfo}>
+                    <h3 className={styles.memberName}>{member.name}</h3>
+                    <p className={styles.memberRole}>
+                      {member.name.includes("Luciun") ? "Tech lead & Co-Founder" : member.role2}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
+          </div>
         </div>
         
-        {/* Placeholder SVGs for development - will be replaced with actual images */}
         <div className="hidden">
           <PhoneIcon />
         </div>

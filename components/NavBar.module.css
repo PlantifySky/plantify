@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
   background-color: rgba(4, 44, 39, 0.555);
-  padding: 0.3rem 0;
+  padding: 0.2rem 0; /* Reduced padding to make navbar thinner */
   position: fixed;
   top: 0;
   left: 0;
@@ -71,6 +71,7 @@
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
+  border-radius: 5px; /* Added rounded corners to contact button */
 }
 
 .contactBtn:hover {
@@ -81,7 +82,7 @@
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 0.2rem 0; /* Make navbar smaller on mobile */
+    padding: 0.15rem 0; /* Further reduced padding on mobile */
   }
   
   .navContainer {
@@ -154,8 +155,9 @@
   }
   
   .contactBtn {
-    padding: 0.3rem 1rem; /* Make contact button smaller */
+    padding: 0.3rem 1rem;
     font-size: 0.9rem;
     margin-right: 0;
+    border-radius: 5px; /* Ensure rounded corners on mobile too */
   }
 }

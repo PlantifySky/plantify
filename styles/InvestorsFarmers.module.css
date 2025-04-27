@@ -39,6 +39,18 @@
   order: 0;
 }
 
+/* Adding new styles for first column (investors) */
+.column:first-child {
+  margin-right: 10%;
+  margin-left: -5%;
+}
+
+/* Adding new styles for last column (farmers) */
+.column:last-child {
+  margin-left: 10%;
+  margin-right: -5%;
+}
+
 .column h2 {
   font-size: 3rem;
   margin-bottom: 2rem;
@@ -213,13 +225,10 @@
   color: white;
 }
 
-.featureItem:last-child .featureLine {
-  top: 15px;
-}
-
+/* Remove this section
 .featureArrow {
   position: absolute;
-  width: 180px; /* Extended width */
+  width: 180px;
   height: 2px;
   background-color: #4CAF50;
   top: 50%;
@@ -238,18 +247,70 @@
   border-right: 2px solid #4CAF50;
   transform: rotate(45deg);
 }
+*/
 
-/* Mobile vertical arrows */
-.verticalArrow {
-  display: none;
-  width: 2px;
-  height: 60px;
+/* Create new arrow classes for each feature */
+.firstHorizontalArrow, .secondHorizontalArrow {
+  position: absolute;
+  height: 2px;
   background-color: #4CAF50;
-  position: relative;
-  margin: 1rem auto;
+  top: 50%;
+  right: 100%;
+  margin-right: 20px;
 }
 
-.verticalArrow::after {
+/* First horizontal arrow - longer and thicker */
+.firstHorizontalArrow {
+  width: 180px;
+  height: 2px;
+}
+
+.firstHorizontalArrow::after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #4CAF50;
+  border-right: 2px solid #4CAF50;
+  transform: rotate(45deg);
+}
+
+/* Second horizontal arrow - shorter and thinner */
+.secondHorizontalArrow {
+  width: 140px; /* Shorter than first horizontal arrow */
+  height: 1px; /* Thinner line */
+}
+
+.secondHorizontalArrow::after {
+  content: '';
+  position: absolute;
+  right: -1px;
+  top: -3px;
+  width: 7px; /* Smaller arrowhead */
+  height: 7px;
+  border-top: 1px solid #4CAF50; /* Thinner border */
+  border-right: 1px solid #4CAF50;
+  transform: rotate(45deg);
+}
+
+/* Vertical arrows styles */
+.firstArrow, .secondArrow {
+  display: none;
+  position: relative;
+  background-color: #4CAF50;
+  margin: 0 auto;
+}
+
+/* First arrow - tall with standard styling */
+.firstArrow {
+  width: 2px;
+  height: 70px;
+  margin: 1.5rem auto;
+}
+
+.firstArrow::after {
   content: '';
   position: absolute;
   bottom: -1px;
@@ -259,6 +320,33 @@
   border-right: 2px solid #4CAF50;
   border-bottom: 2px solid #4CAF50;
   transform: rotate(45deg);
+}
+
+/* Second arrow - make it brighter and thicker */
+.secondArrow {
+  width: 2px; /* Increased thickness to match first arrow */
+  height: 5px;
+  margin: 0 auto;
+  transform: translateY(40px);
+  opacity: 1; /* Full opacity to match first arrow */
+}
+
+.secondArrow::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: -4px; /* Match the first arrow's position */
+  width: 10px; /* Match the first arrow's size */
+  height: 10px;
+  border-right: 2px solid #4CAF50; /* Thicker border to match first arrow */
+  border-bottom: 2px solid #4CAF50;
+  transform: rotate(45deg);
+}
+
+/* Add this new spacer element to create more space between features */
+.featureSpacer {
+  height: 50px; /* Create significant visual space */
+  width: 100%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -299,8 +387,22 @@
     height: 280px;
   }
 
-  .featureArrow {
+  .firstHorizontalArrow {
     width: 120px;
+  }
+  
+  .secondHorizontalArrow {
+    width: 100px;
+  }
+  
+  .column:first-child {
+    margin-right: 1rem;
+    margin-left: -0.5rem;
+  }
+
+  .column:last-child {
+    margin-left: 1rem;
+    margin-right: -0.5rem;
   }
 }
 
@@ -314,6 +416,12 @@
   .column {
     max-width: 90%;
     padding: 1rem;
+  }
+  
+  /* Reset margins for mobile view */
+  .column:first-child, .column:last-child {
+    margin-left: 0;
+    margin-right: 0;
   }
   
   .centerSvg {
@@ -353,12 +461,19 @@
     padding-top: 1rem;
   }
   
-  .featureArrow {
+  /* Hide horizontal arrows on mobile */
+  .firstHorizontalArrow, .secondHorizontalArrow {
     display: none;
   }
   
-  .verticalArrow {
+  /* Show vertical arrows on mobile */
+  .firstArrow, .secondArrow {
     display: block;
+  }
+  
+  /* Make the second arrow longer on mobile view only */
+  .secondArrow {
+    height: 100px;  /* Increased height for better visibility on mobile */
   }
   
   .featureItem {

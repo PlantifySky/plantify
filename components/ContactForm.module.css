@@ -1,0 +1,156 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.contactFormContainer {
+  background-color: white;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  animation: slideIn 0.4s ease-out;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.3s ease;
+}
+
+.closeButton:hover {
+  color: #000;
+}
+
+.formTitle {
+  color: rgba(4, 44, 39, 1);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: rgba(89, 156, 16, 1);
+  box-shadow: 0 0 0 2px rgba(89, 156, 16, 0.2);
+}
+
+.submitButton {
+  background-color: rgba(89, 156, 16, 1);
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover {
+  background-color: #7cb342;
+  transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.errorMessage {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.successMessage {
+  text-align: center;
+  color: rgba(89, 156, 16, 1);
+  font-weight: 500;
+  padding: 1.5rem 0;
+  font-size: 1.1rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .contactFormContainer {
+    padding: 1.5rem;
+    width: 95%;
+  }
+  
+  .formTitle {
+    font-size: 1.5rem;
+  }
+  
+  .formGroup input,
+  .formGroup textarea {
+    padding: 0.7rem;
+  }
+}
