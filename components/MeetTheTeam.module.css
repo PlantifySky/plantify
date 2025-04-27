@@ -1,0 +1,163 @@
+.teamSection {
+  padding: 4rem 0;
+  background-color: white;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.headingContainer {
+  margin-bottom: 3rem;
+  text-align: center;
+  width: 100%;
+}
+
+.subheading {
+  color: #16a34a; /* green-600 */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827; /* gray-900 */
+  margin-top: 0;
+  text-align: center;
+}
+
+.cardsContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.teamCards {
+  display: grid !important;
+  grid-template-columns: repeat(5, 1fr) !important;
+  gap: 1.5rem !important;
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+/* Team info styling - replaces the mobile card info */
+.teamInfoContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.memberInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.memberName {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+  color: #111827; /* gray-900 */
+}
+
+.memberRole {
+  color: #4b5563; /* gray-600 */
+  font-size: 0.9rem;
+}
+
+/* Remove the now-unused mobileCardInfo styles */
+.mobileCardInfo {
+  display: none;
+}
+
+/* Specific styling for SVG images */
+.teamCards img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #f3f4f6; /* Light gray background for SVGs */
+}
+
+/* Inline name container for mobile view */
+.inlineNameContainer {
+  display: none;
+  text-align: center;
+  margin-top: 0.75rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+/* Hide on mobile class */
+.hideOnMobile {
+  display: grid;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .teamCards {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  
+  .teamInfoContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+  
+  /* Mobile layout: First card is featured/centered, others in 2x2 grid */
+  .teamCards {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 0.5rem !important;
+  }
+  
+  .teamCards > div:first-child {
+    grid-column: 1 / -1;
+    margin-bottom: 1rem;
+  }
+  
+  .teamCards > div:not(:first-child) {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+  
+  .teamCards > div {
+    height: auto !important;
+  }
+  
+  /* Show inline name containers on mobile */
+  .inlineNameContainer {
+    display: block;
+  }
+  
+  /* Hide the bottom team info on mobile since we're showing inline */
+  .hideOnMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .teamCards > div:not(:first-child) {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  
+  .teamCards > div > div {
+    height: 150px !important;
+  }
+}

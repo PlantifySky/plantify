@@ -1,0 +1,161 @@
+.navbar {
+  width: 100%;
+  background-color: rgba(4, 44, 39, 0.555);
+  padding: 0.3rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  color: white;
+}
+
+.navContainer {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logoContainer {
+  flex-shrink: 0;
+}
+
+.menuContainer {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navLink {
+  font-size: 20px;
+  font-weight: 200;
+  text-decoration: none;
+  padding: 0.2rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.contactBtn {
+  background-color: rgba(89, 156, 16, 1);
+  color: rgba(253, 254, 253, 1);
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contactBtn:hover {
+  background-color: #7cb342;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(139, 195, 74, 0.3);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.2rem 0; /* Make navbar smaller on mobile */
+  }
+  
+  .navContainer {
+    position: relative;
+    align-items: center;
+  }
+  
+  .logoContainer {
+    max-width: 100px; /* Make logo smaller on mobile */
+  }
+  
+  .menuContainer {
+    justify-content: center;
+    margin-right: 0;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(4, 44, 39, 0.555);
+    padding: 2rem 0;
+    transition: all 0.3s ease;
+  }
+
+  .menuContainer.active {
+    top: 100px; /* Increased to prevent covering the navbar and contact button */
+  }
+
+  .navLinks {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  /* Create a container for the right side buttons */
+  .rightControls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin-left: 5px;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 2px;
+    margin: 5px auto;
+    transition: all 0.3s ease;
+    background-color: currentColor;
+  }
+
+  .bar.active:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .bar.active:nth-child(2) {
+    opacity: 0;
+  }
+
+  .bar.active:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .navLink {
+    font-size: 1rem;
+    color: white;
+  }
+  
+  .contactBtn {
+    padding: 0.3rem 1rem; /* Make contact button smaller */
+    font-size: 0.9rem;
+    margin-right: 0;
+  }
+}

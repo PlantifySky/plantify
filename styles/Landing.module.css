@@ -1,0 +1,92 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.splitSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+  padding: 4rem 0;
+}
+
+.column {
+  flex: 1;
+  padding: 2rem;
+}
+
+.investorsColumn {
+  background-color: white;
+}
+
+.farmersColumn {
+  background-color: white;
+}
+
+.centerSvg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+}
+
+.logoSection {
+  background-color: #003826;
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.logoContainer {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+.description {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.button {
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.investButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.getFundedButton {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.arrow {
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #4CAF50;
+}
+
+.arrowLeft {
+  left: 40%;
+  top: 50%;
+}
+
+.arrowRight {
+  right: 40%;
+  top: 50%;
+}

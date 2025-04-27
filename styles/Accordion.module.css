@@ -1,0 +1,54 @@
+.accordion {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.accordionTitle {
+  font-size: 2.5rem;
+  color: #0a381f;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.accordionItem {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.accordionHeader:hover {
+  color: #2e7d32;
+}
+
+.accordionQuestion {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #0a381f;
+  margin: 0;
+}
+
+.accordionContent {
+  padding: 0 0 20px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.arrow {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+  color: #0a381f;
+}
+
+.arrowDown {
+  transform: rotate(90deg);
+}
