@@ -17,11 +17,17 @@ const flatten = (children: React.ReactNode): React.ReactNode[] => {
   React.Children.forEach(children, (child) => {
     if (React.isValidElement(child)) {
       if (child.type === React.Fragment) {
-        result.push(...flatten(child.props.children));
-      } else if (child.props.children) {
-        result.push(React.cloneElement(child, {}));
+        // Add proper type assertion for props
+        const fragmentProps = child.props as { children: React.ReactNode };
+        result.push(...flatten(fragmentProps.children));
       } else {
-        result.push(child);
+        // Fix: Add proper type assertion for all element props
+        const elementProps = child.props as { children?: React.ReactNode };
+        if (elementProps.children) {
+          result.push(React.cloneElement(child, {}));
+        } else {
+          result.push(child);
+        }
       }
     } else {
       const parts = String(child).split(/(\s+)/);
@@ -49,7 +55,9 @@ function OpacityChild({
 
   let className = "";
   if (React.isValidElement(children)) {
-    className = Reflect.get(children, "props")?.className;
+    // Fix: Type the props properly when accessing className
+    const props = children.props as { className?: string };
+    className = props.className || "";
   }
 
   return (
