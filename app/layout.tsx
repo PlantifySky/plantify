@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Alexandria, Arimo } from "next/font/google";
 import "./globals.css";
 
