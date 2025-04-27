@@ -1,0 +1,119 @@
+.loadingContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1a3c14; /* Changed to a darker green theme */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  animation: fadeIn 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.loadingContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoContainer {
+  margin-bottom: 2rem;
+}
+
+.pulseAnimation {
+  animation: pulse 2s infinite;
+}
+
+.spinnerContainer {
+  margin: 1rem 0;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(89, 156, 16, 0.2);
+  border-top-color: rgba(89, 156, 16, 1);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loadingText {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff; /* Changed text color to white for better contrast with dark background */
+  margin-top: 1rem;
+  font-family: 'Alexandria', sans-serif;
+}
+
+.leafIcon {
+  position: absolute;
+  background-color: rgba(144, 238, 144, 0.6); /* Lighter green for better visibility on dark background */
+  mask-image: url('/leaf-icon.svg');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  animation: float 8s ease-in-out infinite;
+  opacity: 0.7; /* Slightly increased opacity */
+}
+
+/* Add this class to fix navbar spacing if needed */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

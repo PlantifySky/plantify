@@ -1,7 +1,7 @@
 .navbar {
   width: 100%;
   background-color: rgba(4, 44, 39, 0.555);
-  padding: 0.2rem 0; /* Reduced padding to make navbar thinner */
+  padding: 0.05rem 0; /* Further reduced padding */
   position: fixed;
   top: 0;
   left: 0;
@@ -16,11 +16,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.5rem; /* Reduced gap */
 }
 
 .logoContainer {
   flex-shrink: 0;
+  transform: scale(0.9); /* Slightly reduce logo size */
 }
 
 .menuContainer {
@@ -33,17 +34,17 @@
 .navLinks {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2rem; /* Reduced gap */
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .navLink {
-  font-size: 20px;
+  font-size: 16px; /* Further reduced font size */
   font-weight: 200;
   text-decoration: none;
-  padding: 0.2rem 0;
+  padding: 0.05rem 0; /* Minimal vertical padding */
   position: relative;
   transition: all 0.3s ease;
 }
@@ -66,12 +67,13 @@
 .contactBtn {
   background-color: rgba(89, 156, 16, 1);
   color: rgba(253, 254, 253, 1);
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
+  padding: 0.3rem 1.2rem; /* Reduced padding */
+  font-size: 0.9rem; /* Smaller font */
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  border-radius: 5px; /* Added rounded corners to contact button */
+  border-radius: 5px;
+  line-height: 1; /* Tighter line height */
 }
 
 .contactBtn:hover {
@@ -82,7 +84,7 @@
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 0.15rem 0; /* Further reduced padding on mobile */
+    padding: 0.04rem 0; /* Minimal padding */
   }
   
   .navContainer {
@@ -91,7 +93,8 @@
   }
   
   .logoContainer {
-    max-width: 100px; /* Make logo smaller on mobile */
+    max-width: 90px; /* Even smaller logo on mobile */
+    transform: scale(0.85); /* Scale down slightly */
   }
   
   .menuContainer {
@@ -107,7 +110,7 @@
   }
 
   .menuContainer.active {
-    top: 100px; /* Increased to prevent covering the navbar and contact button */
+    top: 50px; /* Reduced top position to account for shorter navbar */
   }
 
   .navLinks {
@@ -130,9 +133,9 @@
 
   .bar {
     display: block;
-    width: 25px;
+    width: 22px; /* Slightly smaller */
     height: 2px;
-    margin: 5px auto;
+    margin: 4px auto; /* Reduced margin between bars */
     transition: all 0.3s ease;
     background-color: currentColor;
   }
@@ -155,9 +158,10 @@
   }
   
   .contactBtn {
-    padding: 0.3rem 1rem;
-    font-size: 0.9rem;
+    padding: 0.2rem 0.8rem; /* Minimal padding */
+    font-size: 0.8rem; /* Smaller font */
+    line-height: 1;
     margin-right: 0;
-    border-radius: 5px; /* Ensure rounded corners on mobile too */
+    border-radius: 4px;
   }
 }
