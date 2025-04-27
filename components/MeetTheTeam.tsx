@@ -58,8 +58,6 @@ const teamMembers: TeamMember[] = [
 
 const MeetTheTeam = () => {
   const [orderedMembers, setOrderedMembers] = useState(teamMembers);
-  const [featuredMember, setFeaturedMember] = useState<TeamMember | null>(null);
-  const [otherMembers, setOtherMembers] = useState<TeamMember[]>([]);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {

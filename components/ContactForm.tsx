@@ -67,7 +67,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
         
         {submitSuccess ? (
           <div className={styles.successMessage}>
-            <p>Thank you for your message! We'll get back to you soon.</p>
+            <p>Thank you for your message! We&apos;ll get back to you soon.</p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className={styles.form}>
