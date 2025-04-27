@@ -1,8 +1,5 @@
 import React from 'react'
-import Image from 'next/image'
 import { BentoGrid, BentoGridItem } from './ui/bento-grid'
-import { TextReveal } from "@/components/magicui/text-reveal";
-
 
 export const MakeUsDif = () => {
   return (
@@ -90,16 +87,16 @@ export const MakeUsDif = () => {
             
             <div className="agritech-content">
               <p>
-                While agricultural investment isn't new, our approach is. We are:
+                While agricultural investment isn&apos;t new, our approach is. We are:
               </p>
               <ul className="list-disc pl-5 my-3">
-                <li className="mb-2">Bringing "crowdfarming" to underserved regions, empowering local farmers with tools they never had access to</li>
+                <li className="mb-2">Bringing &quot;crowdfarming&quot; to underserved regions, empowering local farmers with tools they never had access to</li>
                 <li className="mb-2">Opening small-scale investments to the general public, making farming more accessible and attractive to young people</li>
                 <li className="mb-2">Combining financial, environmental, and social returns into one transparent platform</li>
                 <li className="mb-2">Using AI and data visualization to turn farming into a smart, trackable, and impactful digital experience</li>
               </ul>
               <p>
-                We believe Plantify fits closely with NGDA's vision of digital action for societal impact. We're excited to be building something that merges sustainability, inclusion, and tech, and we hope to be part of the upcoming cohort.
+                We believe Plantify fits closely with NGDA&apos;s vision of digital action for societal impact. We&apos;re excited to be building something that merges sustainability, inclusion, and tech, and we hope to be part of the upcoming cohort.
               </p>
             </div>
           </div>

@@ -1,8 +1,6 @@
 import React from 'react'
 import styles from './Greenway.module.css'
 import Image from 'next/image'
-// You can also import the SVG directly if it's in your project
-import GWSvg from '../public/gw.svg'
 
 const Greenway = () => {
   return (
