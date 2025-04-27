@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 // Define card type before using it
 type Card = {
@@ -39,14 +40,15 @@ export const Card = React.memo(
           hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
         )}
       >
-        <img
+        <Image
           src={card.src}
           alt={card.title}
           className="object-contain w-full h-full"
+          width={500}
+          height={500}
           onError={(e) => {
             console.error(`Failed to load image: ${card.src}`);
-            e.currentTarget.src = "/placeholder-fallback.svg";
-            e.currentTarget.onerror = null;
+            // Can't set src directly on next/image, need a different approach for fallbacks
           }}
         />
         {/* Show overlay only on desktop if showMobileInfo is true */}
