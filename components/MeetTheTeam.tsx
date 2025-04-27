@@ -19,7 +19,6 @@ const teamMembers: TeamMember[] = [
     department: "Pitch & Communication",
     src: "/per1.svg",
     title: "Yadav S Singh - Pitch & Communication",
-    role: "PITCH & COMMUNICATION",
     role2: "Tech Lead & Communication"
   },
   {
@@ -27,7 +26,6 @@ const teamMembers: TeamMember[] = [
     department: "Research & Documentation",
     src: "/per2.svg",
     title: "Abrahame H Mola - Research & Documentation",
-    role: "RESEARCH & DOCUMENTATION",
     role2: "Research & Documention"
   },
   {
@@ -35,7 +33,6 @@ const teamMembers: TeamMember[] = [
     department: "CEO",
     src: "/per3.svg",
     title: "Abisola O Adeyanu - CEO",
-    role: "CEO",
     role2: "CEO"
   },
   {
@@ -43,7 +40,6 @@ const teamMembers: TeamMember[] = [
     department: "Product Designer",
     src: "/per4.svg",
     title: "Harrington Mbangu - Product Designer",
-    role: "PRODUCT DESIGN",
     role2: "Product Designer"
   },
   {
@@ -51,7 +47,6 @@ const teamMembers: TeamMember[] = [
     department: "Tech Lead",
     src: "/per5.svg",
     title: "Luciun September - Tech Lead",
-    role: "TECH LEAD",
     role2: "Tech lead"
   }
 ]
