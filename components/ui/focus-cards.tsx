@@ -46,7 +46,7 @@ export const Card = React.memo(
           className="object-contain w-full h-full"
           width={500}
           height={500}
-          onError={(e) => {
+          onError={() => {
             console.error(`Failed to load image: ${card.src}`);
             // Can't set src directly on next/image, need a different approach for fallbacks
           }}

@@ -36,9 +36,6 @@ const NavBar = () => {
         { id: 'faq', color: 'text-white' }
       ];
 
-      // We don't need to store scrollPosition since it's not used
-      window.scrollY; // This still gets the current scroll position for the calculation below
-
       let currentSection = sections[0];
 
       sections.forEach(section => {
