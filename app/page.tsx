@@ -5,8 +5,6 @@ import { MakeUsDif } from "@/components/MakeUsDif";
 import MeetTheTeam from "@/components/MeetTheTeam";
 import Ready from "@/components/Ready";
 import Greenway from "@/components/greenway";
-import Image from "next/image";
-import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import Accordion from "@/components/Accordian";
 import NavBar from "@/components/NavBar";
 import InvestorsFarmers from "@/components/InvestorsFarmers";
