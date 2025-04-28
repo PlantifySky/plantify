@@ -135,4 +135,3 @@ const MeetTheTeam = () => {
   )
 }
 export default MeetTheTeam
-export default MeetTheTeam
