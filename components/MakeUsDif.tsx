@@ -25,8 +25,8 @@ export const MakeUsDif = () => {
       <div className="container mx-auto">
         <div className="flex flex-col md:flex-row justify-center items-center max-w-[1280px] w-full mx-auto">
           {/* Bento Grid on the left - made more centered */}
-          <div className="w-full md:w-[50%] md:pr-5">
-            <BentoGrid className="grid-rows-[auto,auto] max-w-full">
+          <div className={`w-full ${isMobile ? 'mb-8' : 'md:w-[55%] md:pr-5'}`}>
+            <BentoGrid className={isMobile ? "grid-cols-1 gap-4" : "grid-cols-2 gap-4"}>
               {/* Empowering rural farmers - top left */}
               <BentoGridItem
                 className="col-span-1 row-span-1 group relative"
@@ -96,13 +96,12 @@ export const MakeUsDif = () => {
               />
             </BentoGrid>
           </div>
-
-          {/* Text content on the right - adjusted for better spacing */}
-          <div className="w-full md:w-[40%] flex flex-col justify-start pt-4 font-['Alexandria'] md:pl-5 mt-10 md:mt-0">
-            <h4 className="makes-us-different-heading">What Makes Us Different</h4>
-            <h2 className="agritech-platform-heading">AgriTech Digital Platform</h2>
-            
-            <div className="agritech-content">
+          
+          {/* Text content on the right */}
+          <div className={`w-full ${isMobile ? '' : 'md:w-[38%] md:pl-5'}`}>
+            <h3 className="makes-us-different-heading mb-4 text-center md:text-left">What Makes Us Different</h3>
+            <h2 className="agritech-platform-heading mb-5 text-center md:text-left">Revolutionary Digital AgriTech Platform</h2>
+            <div className="agritech-content text-center md:text-left">
               <p>
                 While agricultural investment isn&apos;t new, our approach is. We are:
               </p>
@@ -120,5 +119,5 @@ export const MakeUsDif = () => {
         </div>
       </div>
     </section>
-  )
+  );
 }
