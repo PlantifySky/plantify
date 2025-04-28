@@ -20,7 +20,7 @@ export default function Home() {
     // Simulate loading time or actual data fetching
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000); // Show loading for 3 seconds
+    }, 1500); // Show loading for 1.5 seconds
 
     return () => clearTimeout(timer);
   }, []);

@@ -93,20 +93,21 @@
 .teamInfoContainer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 4rem; /* Increased from 2.5rem to 4rem to match card spacing */
-  width: 100%; /* Changed from 85% to 100% to match card container width */
+  gap: 4rem; /* Matches the card spacing */
+  width: 100%;
   margin: 1rem auto 0;
   text-align: center;
   justify-items: center;
+  padding: 0 1rem; /* Add padding to match focus cards container */
 }
 
 .memberInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 100%;
-  width: 100%;
-  padding: 0 0.25rem; /* Decreased padding from 0.5rem to 0.25rem */
+  width: 100%; /* Take full width of grid cell */
+  max-width: 160px; /* Limit max width to align with cards above */
+  padding: 0; /* Remove padding */
 }
 
 .memberName {
@@ -114,11 +115,17 @@
   font-size: 1.1rem;
   margin-bottom: 0.25rem;
   color: #111827; /* gray-900 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%; /* Ensure text stays within container */
 }
 
 .memberRole {
   color: #4b5563; /* gray-600 */
   font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%; /* Ensure text stays within container */
 }
 
 /* Remove the now-unused mobileCardInfo styles */

@@ -103,7 +103,7 @@ const MeetTheTeam = () => {
             <div className="w-full flex flex-col items-center">
               <FocusCards 
                 cards={orderedMembers.map(member => ({
-                  title: member.role,
+                  title: "",
                   src: member.src,
                 }))}
                 customClass={`${styles.teamCards} ${isMobile ? styles.mobileCards : ''}`}
