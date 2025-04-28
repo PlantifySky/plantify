@@ -72,7 +72,7 @@ const Accordion = () => {
     },
     {
         question: "Is Plantify available worldwide?",
-        answer: "We are currently launching in [your country/region — e.g., South Africa] with plans to expand across Africa and globally in the near future. Stay tuned!"
+        answer: "We are currently launching in South Africa with plans to expand across Africa and globally in the near future. Stay tuned!"
     },
     {
         question: "How can I get started?",

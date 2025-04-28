@@ -1,7 +1,5 @@
 "use client";
-
-import { useState, useEffect } from 'react';
-import LoadingScreen from '../components/LoadingScreen';
+import { useEffect } from 'react';
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import HowToStart from "@/components/HowToStart";
@@ -13,26 +11,12 @@ import Accordion from "@/components/Accordian";
 import NavBar from "@/components/NavBar";
 import InvestorsFarmers from "@/components/InvestorsFarmers";
 import '@/styles/hideScrollbar.css'; // Import CSS to hide scrollbar
-
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
-    // Simulate loading time or actual data fetching
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 1500); // Show loading for 1.5 seconds
-
-    return () => clearTimeout(timer);
+    // Any initialization logic can stay here if needed
+    // The loading functionality has been moved to app/loading.tsx
   }, []);
-
-  // Comment out the loading screen condition
-  /*
-  if (isLoading) {
-    return <LoadingScreen />;
-  }
-  */
-
+  
   return (
     <main className="relative flex justify-center items-center flex-col overflow-hidden">
       <div className="w-full">
