@@ -26,9 +26,12 @@ export default function Home() {
     return () => clearTimeout(timer);
   }, []);
 
+  // Comment out the loading screen condition
+  /*
   if (isLoading) {
     return <LoadingScreen />;
   }
+  */
 
   return (
     <main className="relative flex justify-center items-center flex-col overflow-hidden">
