@@ -9,7 +9,6 @@ interface TeamMember {
   department: string;
   src: string;
   title: string;
-  role: string;
   role2: string;
 }
 
@@ -124,15 +123,16 @@ const MeetTheTeam = () => {
                 ))}
               </div>
             </div>
+            </div>
           </div>
         </div>
-        
+        <div className="hidden">
         <div className="hidden">
           <PhoneIcon />
         </div>
-      </div>
+      </div>n>
     </section>
   )
 }
-
+export default MeetTheTeam
 export default MeetTheTeam

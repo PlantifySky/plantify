@@ -67,13 +67,13 @@
 .contactBtn {
   background-color: rgba(89, 156, 16, 1);
   color: rgba(253, 254, 253, 1);
-  padding: 0.3rem 1.2rem; /* Reduced padding */
-  font-size: 0.9rem; /* Smaller font */
+  padding: 0.5rem 1.8rem; /* Increased padding */
+  font-size: 1.1rem; /* Larger font */
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
   border-radius: 5px;
-  line-height: 1; /* Tighter line height */
+  line-height: 1.2; /* Slightly increased line height */
 }
 
 .contactBtn:hover {
@@ -158,9 +158,9 @@
   }
   
   .contactBtn {
-    padding: 0.2rem 0.8rem; /* Minimal padding */
-    font-size: 0.8rem; /* Smaller font */
-    line-height: 1;
+    padding: 0.4rem 1.2rem; /* Increased padding for mobile */
+    font-size: 0.95rem; /* Larger font for mobile */
+    line-height: 1.2;
     margin-right: 0;
     border-radius: 4px;
   }
