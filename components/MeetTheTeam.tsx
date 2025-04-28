@@ -10,6 +10,7 @@ interface TeamMember {
   src: string;
   title: string;
   role2: string;
+  // Removed 'role' property since we're using 'role2' throughout the code
 }
 
 const teamMembers: TeamMember[] = [
@@ -130,7 +131,7 @@ const MeetTheTeam = () => {
         <div className="hidden">
           <PhoneIcon />
         </div>
-      </div>n>
+      </div>
     </section>
   )
 }
