@@ -6,6 +6,7 @@ import HowToStart from "@/components/HowToStart";
 import { MakeUsDif } from "@/components/MakeUsDif";
 import MeetTheTeam from "@/components/MeetTheTeam";
 import Ready from "@/components/Ready";
+import { Analytics } from "@vercel/analytics/react"
 import Greenway from "@/components/greenway";
 import Accordion from "@/components/Accordian";
 import NavBar from "@/components/NavBar";
