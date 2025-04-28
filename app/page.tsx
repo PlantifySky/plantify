@@ -12,6 +12,7 @@ import Greenway from "@/components/greenway";
 import Accordion from "@/components/Accordian";
 import NavBar from "@/components/NavBar";
 import InvestorsFarmers from "@/components/InvestorsFarmers";
+import '@/styles/hideScrollbar.css'; // Import CSS to hide scrollbar
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);

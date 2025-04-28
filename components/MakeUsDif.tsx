@@ -33,7 +33,7 @@ export const MakeUsDif = () => {
                 header={
                   <div className="relative w-full h-full min-h-[180px] rounded-lg overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20 z-10" />
-                    <div className={`absolute bottom-8 left-8 z-20 transition-opacity duration-300 ${isMobile ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
+                    <div className="absolute bottom-8 left-8 z-20 opacity-100">
                       <h3 className="text-white font-semibold text-xl">Empowering rural<br />farmers with<br />access to capital</h3>
                     </div>
                     <div className="absolute inset-0 bg-cover bg-center" 
@@ -48,7 +48,7 @@ export const MakeUsDif = () => {
                 header={
                   <div className="relative w-full h-full min-h-[180px] md:min-h-[320px] rounded-lg overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
-                    <div className={`absolute bottom-8 left-8 z-20 transition-opacity duration-300 ${isMobile ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
+                    <div className="absolute bottom-8 left-8 z-20 opacity-100">
                       <p className="text-[rgba(89,156,16,1)] font-semibold text-lg">AI-powered</p>
                       <h3 className="text-white font-semibold text-2xl">risk + yield<br />predictions</h3>
                     </div>
@@ -86,7 +86,7 @@ export const MakeUsDif = () => {
                 header={
                   <div className="relative w-full h-full min-h-[180px] rounded-lg overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/20 z-10" />
-                    <div className={`absolute bottom-8 left-8 z-20 transition-opacity duration-300 ${isMobile ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}>
+                    <div className="absolute top-8 left-4 z-20 opacity-100">
                       <h3 className="text-white font-semibold text-xl">Turning everyday<br />people into impact<br />investors</h3>
                     </div>
                     <div className="absolute inset-0 bg-cover bg-center" 
@@ -100,7 +100,6 @@ export const MakeUsDif = () => {
           {/* Text content on the right - adjusted for better spacing */}
           <div className="w-full md:w-[40%] flex flex-col justify-start pt-4 font-['Alexandria'] md:pl-5 mt-10 md:mt-0">
             <h4 className="makes-us-different-heading">What Makes Us Different</h4>
-            <br/>
             <h2 className="agritech-platform-heading">AgriTech Digital Platform</h2>
             
             <div className="agritech-content">

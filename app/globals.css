@@ -126,6 +126,7 @@
 
 .footer-links {
   font-size: 15px;
+  margin-top: 0.756rem;
 }
 
 .footer-logo-section {
@@ -533,7 +534,6 @@ body {
   font-weight: 500;
   color: #042C27;
   line-height: 1.1;
-  margin-top: 0.75rem;
   margin-bottom: 1.5rem;
   font-family: 'Alexandria', sans-serif;
 }
