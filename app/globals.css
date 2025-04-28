@@ -640,3 +640,76 @@ section:has(.makes-us-different-heading) .w-full.md\:w-\[38\%\] {
 .scroll-file[style*="opacity: 1"] {
   @apply text-blue-300 dark:text-blue-500;
 }
+
+/* Refined Bento Grid Visibility Fixes - Keeping Original Structure */
+.bento-grid-wrapper {
+  position: relative;
+  width: 100%;
+  display: block;
+  z-index: 5;
+  overflow: visible;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+/* Force grid display */
+.bento-visible {
+  display: grid !important;
+}
+
+/* Style individual items */
+.bento-item {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background-color: #fff;
+  overflow: visible;
+}
+
+/* Fix background images */
+.image-fix {
+  content: "";
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+  top: 0 !important;
+  left: 0 !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Force visibility of grid item headers */
+[class*="bento-grid-item"] header {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  height: 100%;
+}
+
+/* Ensure text visibility */
+[class*="bento-grid-item"] .text-white {
+  color: white !important;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.9) !important;
+  font-weight: 600 !important;
+}
+
+/* Add better visibility to grid elements */
+.bento-grid-wrapper [class*="group"] {
+  border-radius: 8px;
+  overflow: visible;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Explicitly set background styles for bento grid images */
+[style*="background-image"] {
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: cover !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
