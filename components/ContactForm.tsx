@@ -29,8 +29,15 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     setSubmitError('');
 
     try {
-      // Call the actual API route to send the email
-      const response = await fetch('/api/contact', {
+      // Use only the environment variable for the API URL
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+      
+      // Check if the API URL is defined
+      if (!apiUrl) {
+        throw new Error('API configuration error. Please try again later.');
+      }
+      
+      const response = await fetch(`${apiUrl}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
