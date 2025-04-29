@@ -5,7 +5,7 @@ const HowToStart = () => {
   return (
     <section className="how-to-start py-20 px-4 md:px-8 lg:px-16 flex flex-col items-center justify-center min-h-[50vh]">
       <div className="container mx-auto text-center flex flex-col items-center justify-center">
-        <h2 className="text-[rgba(89,156,16,1)] font-medium text-xl md:text-2xl mb-10">How To Start</h2>
+        <h2 className="text-[rgba(89,156,16,1)] font-medium text-xl md:text-2xl mb-10">Three Simple Steps</h2>
         <h1 className="how-works-heading text-6xl md:text-7xl lg:text-6xl mb-10 text-[#042C27]">
           How It Works
         </h1><br/>
@@ -32,8 +32,7 @@ const HowToStart = () => {
             <h3 className="step-title">Choose a Farm Plot or Yield</h3>
             <div className="step-label">Step 1</div>
             <p className="step-description">
-              Our goal is to promote food security, rural economic development, and 
-              environmentally responsible farming through technology.
+              Browse through available farm plots or select from a list of high-demand crops. Each option comes with insights on location, soil type, projected returns, and sustainability impact—so you can invest with confidence.
             </p>
           </div>
           
@@ -52,8 +51,7 @@ const HowToStart = () => {
             <h3 className="step-title">Invest from as little as R100</h3>
             <div className="step-label">Step 2</div>
             <p className="step-description">
-              Our goal is to promote food security, rural economic development, and 
-              environmentally responsible farming through technology.
+              Pick your preferred plot or yield and contribute as much as you like, starting at just R100. Your investment helps fund real agricultural projects while giving you access to real-time updates and projected returns.
             </p>
           </div>
           
@@ -72,8 +70,7 @@ const HowToStart = () => {
             <h3 className="step-title">Track Growth, Harvest & Earn Returns</h3>
             <div className="step-label">Step 3</div>
             <p className="step-description">
-              Our goal is to promote food security, rural economic development, and 
-              environmentally responsible farming through technology.
+              Monitor your crops through the Plantify dashboard. From planting to harvest, you’ll receive updates on progress. Once the yield is sold, you earn your share of the returns directly—simple, transparent, and rewarding.
             </p>
           </div>
         </div>

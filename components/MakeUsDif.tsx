@@ -107,16 +107,16 @@ export const MakeUsDif = () => {
             <h2 className="agritech-platform-heading mb-5 text-center md:text-left">AgriTech Digital Platform</h2>
             <div className="agritech-content text-center md:text-left">
               <p>
-                While agricultural investment isn&apos;t new, our approach is. We are:
+                Plantify is a digital-first platform transforming the way agriculture is funded, tracked, and experienced. We bridge the gap between everyday people and real agricultural opportunities using smart, accessible tools that make investing in food systems simple and transparent.
               </p>
               <ul className="list-disc pl-5 my-3">
-                <li className="mb-2">Bringing &quot;crowdfarming&quot; to underserved regions, empowering local farmers with tools they never had access to</li>
-                <li className="mb-2">Opening small-scale investments to the general public, making farming more accessible and attractive to young people</li>
-                <li className="mb-2">Combining financial, environmental, and social returns into one transparent platform</li>
-                <li className="mb-2">Using AI and data visualization to turn farming into a smart, trackable, and impactful digital experience</li>
+                <li className="mb-2">We introduce crowdfarming to underserved farming communities, enabling access to funding, equipment, and digital support where it’s needed most.</li>
+                <li className="mb-2">We make agricultural investing accessible by lowering barriers to entry—starting from just R100—allowing anyone to participate, regardless of income or background.</li>
+                <li className="mb-2">We offer investors more than just profits, delivering meaningful environmental and social returns through real-time project impact tracking.</li>
+                <li className="mb-2">We use AI, machine learning, and data visualization to give users insight into farm performance, crop health, and harvest timelines—all from a clean digital dashboard.</li>
               </ul>
               <p>
-                We believe Plantify fits closely with NGDA&apos;s vision of digital action for societal impact. We&apos;re excited to be building something that merges sustainability, inclusion, and tech, and we hope to be part of the upcoming cohort.
+                With Plantify, agriculture becomes interactive, inclusive, and future-ready. Our mission is to build a sustainable ecosystem where investment meets innovation, and every contribution helps grow a better food future for all.
               </p>
             </div>
           </div>
