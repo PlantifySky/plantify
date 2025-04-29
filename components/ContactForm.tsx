@@ -30,7 +30,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
 
     try {
       // Use the Flask backend API URL
-      const apiUrl = process.env.NEXT_PUBLIC_FLASK_API_URL;
+      const apiUrl = process.env.NEXT_PUBLIC_FLASK_API_URL || "https://plantify-email-backend.onrender.com";
       
       const response = await fetch(`${apiUrl}/api/contact`, {
         method: 'POST',
