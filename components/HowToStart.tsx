@@ -5,7 +5,7 @@ const HowToStart = () => {
   return (
     <section className="how-to-start py-20 px-4 md:px-8 lg:px-16 flex flex-col items-center justify-center min-h-[50vh]">
       <div className="container mx-auto text-center flex flex-col items-center justify-center">
-        <h2 className="text-[rgba(89,156,16,1)] font-medium text-xl md:text-2xl mb-10">Three Simple Steps</h2>
+        <h2 className="text-[rgba(89,156,16,1)] font-medium text-xl md:text-2xl mb-10">Three Steps</h2>
         <h1 className="how-works-heading text-6xl md:text-7xl lg:text-6xl mb-10 text-[#042C27]">
           How It Works
         </h1><br/>
