@@ -29,13 +29,8 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     setSubmitError('');
 
     try {
-      // Use only the environment variable for the API URL
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL;
-      
-      // Check if the API URL is defined
-      if (!apiUrl) {
-        throw new Error('API configuration error. Please try again later.');
-      }
+      // Use the Flask backend API URL
+      const apiUrl = process.env.NEXT_PUBLIC_FLASK_API_URL;
       
       const response = await fetch(`${apiUrl}/api/contact`, {
         method: 'POST',
