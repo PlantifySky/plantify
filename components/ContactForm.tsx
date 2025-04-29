@@ -36,6 +36,12 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
         body: JSON.stringify(formData)
       });
       
+      // Handle non-JSON responses
+      const contentType = response.headers.get('content-type');
+      if (!contentType || !contentType.includes('application/json')) {
+        throw new Error('Server returned non-JSON response, please try again later');
+      }
+      
       const data = await response.json();
       
       if (!response.ok) {
@@ -51,6 +57,7 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
         onClose();
       }, 3000);
     } catch (error) {
+      console.error('Contact form submission error:', error);
       setSubmitError(error instanceof Error ? error.message : 'Failed to send message. Please try again.');
     } finally {
       setIsSubmitting(false);
