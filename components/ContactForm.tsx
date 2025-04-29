@@ -29,8 +29,9 @@ const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
     setSubmitError('');
 
     try {
-      // Call the actual API route to send the email
-      const response = await fetch('/api/contact', {
+      // Call the Flask backend API to send the email
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+      const response = await fetch(`${apiUrl}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
